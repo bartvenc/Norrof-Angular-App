@@ -33,6 +33,7 @@ export class PokemonStatsComponent implements OnInit {
         this.picS.push(key);
       }
     }
+    this.picS = this.picS.reverse();
   }
 
   changePic() {
@@ -42,7 +43,7 @@ export class PokemonStatsComponent implements OnInit {
         this.timeLeft--;
       } else {
         console.log("changing time");
-        if (this.picIndex > 2) {
+        if (this.picIndex > this.picS.length-2) {
           this.picIndex = 0;
         } else {
           this.picIndex++;
