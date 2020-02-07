@@ -1,0 +1,22 @@
+<app-pokemon-stats
+  [stats]="pokeAllDetail.stats"
+  [pic]="pokeAllDetail.sprites"
+  [name]="pokeAllDetail.name"
+  [species]="pokeAllDetail.species"
+  [types]="pokeAllDetail.types"
+>
+</app-pokemon-stats>
+<app-pokemon-profile
+  *ngIf="pokeAllDetail"
+  [baseExperience]="pokeAllDetail.base_experience"
+  [height]="pokeAllDetail.height"
+  [weight]="pokeAllDetail.weight"
+  [abilities]="pokeAllDetail.abilities"
+></app-pokemon-profile>
+
+<app-pokemon-moves
+  
+  [pokeMoves]="pokeAllDetail.moves"
+></app-pokemon-moves>
+
+ 

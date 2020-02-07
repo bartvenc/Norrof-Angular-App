@@ -1,0 +1,7 @@
+<div [routerLink]="['/pokemon', poke.name]" class="card pl-0 text-center " style="width: 10rem;">
+  <img class="card-img-top" style="background-color: #FFF9FB;" src="{{ poke.picUrl }}" alt="Card image cap" />
+  <div class="card-body" style="background-color: #FFF9FB;">
+    <h5 class="card-title">{{ poke.name | titlecase}}</h5>
+  </div>
+</div>
+

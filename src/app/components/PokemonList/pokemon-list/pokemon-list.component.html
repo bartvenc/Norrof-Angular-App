@@ -1,0 +1,11 @@
+<div class="container" style="text-align: -webkit-center; background-color: ivory;">
+  <h1>Pokemon Libary</h1>
+  <div class="row" style="justify-content: center;" >
+    <div *ngFor="let p of pokemonRealList" class="col-md-3 mb-4">
+      <app-pokemon-list-item [poke]="p"></app-pokemon-list-item>
+    </div>
+    <button class="button" (click)="loadMore()">
+      Load More
+    </button>
+  </div>
+</div>
