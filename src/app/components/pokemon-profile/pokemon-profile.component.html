@@ -25,7 +25,7 @@
       <div *ngFor="let p of abilities">
         <div class="d-flex w-100  justify-content-between">
           <h5>Slot: {{ p.slot }}:</h5>
-          <h5>{{ p.ability.name | titlecase }}</h5>
+          <h5 style="text-transform: capitalize">{{ p.ability.name }}</h5>
         </div>
       </div>
     </div>
