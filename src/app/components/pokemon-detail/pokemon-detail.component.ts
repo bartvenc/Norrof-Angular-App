@@ -10,7 +10,7 @@ import { Poke } from "../../Modules/poke.model"
 })
 export class PokemonDetailComponent implements OnInit {
   param: any;
-  pokeAllDetail: Poke = [];
+  pokeAllDetail: Poke = null;
   picS: string[] = [];
 
   loading: boolean = true;
