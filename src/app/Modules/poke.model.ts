@@ -6,7 +6,7 @@ export class Poke {
   is_default: boolean;
   order: number;
   weight: number;
-  abilities: [];
+  abilities: any[] = [];
   forms: [];
   game_indices: [];
   held_items: [];
