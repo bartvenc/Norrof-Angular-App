@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { PokemonFetchService } from "../../services/pokemon-fetch.service";
+import { PokeDetailModule } from "../../Modules/poke-detail/poke-detail.module"
 
 @Component({
   selector: "app-pokemon-detail",
@@ -9,7 +10,7 @@ import { PokemonFetchService } from "../../services/pokemon-fetch.service";
 })
 export class PokemonDetailComponent implements OnInit {
   param: any;
-  pokeAllDetail: any[] = [];
+  pokeAllDetail: PokeDetailModule[] = [];
   picS: string[] = [];
 
   loading: boolean = true;
