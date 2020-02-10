@@ -11,7 +11,7 @@ export class Poke {
   game_indices: [];
   held_items: [];
   location_area_encounters: [];
-  moves: [];
+  moves: []=[];
   species: {};
   sprites: {};
   stats: [];
