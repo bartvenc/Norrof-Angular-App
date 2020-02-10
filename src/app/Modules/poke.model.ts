@@ -1,4 +1,4 @@
-export class PokeDetailModule {
+export class Poke {
   id: number;
   name: string;
   base_experience: number;

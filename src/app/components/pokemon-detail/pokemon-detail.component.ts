@@ -1,7 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { ActivatedRoute } from "@angular/router";
 import { PokemonFetchService } from "../../services/pokemon-fetch.service";
-import { PokeDetailModule } from "../../Modules/PokeDetailModule"
+import { Poke } from "../../Modules/poke.model"
 
 @Component({
   selector: "app-pokemon-detail",
@@ -10,7 +10,7 @@ import { PokeDetailModule } from "../../Modules/PokeDetailModule"
 })
 export class PokemonDetailComponent implements OnInit {
   param: any;
-  pokeAllDetail: PokeDetailModule[] = [];
+  pokeAllDetail: Poke[] = [];
   picS: string[] = [];
 
   loading: boolean = true;
@@ -20,7 +20,7 @@ export class PokemonDetailComponent implements OnInit {
   ) {
     this.param = this.route.snapshot.params.id;
     this.pokemonFetchService.getPokeProfileDetail(this.param).subscribe(res => {
-      this.pokeAllDetail = res.body;
+      this.pokeAllDetail = res.body; 
       this.loading = false;
       //console.log(this.pokeAllDetail.moves);
     });
