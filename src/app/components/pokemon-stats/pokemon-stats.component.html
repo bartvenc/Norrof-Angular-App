@@ -1,18 +1,29 @@
-<div  (click)="filterPics()"
+<div
   class="container"
   style="text-align: -webkit-center; background-color:ivory;"
 >
+  <button
+    type="button"
+    class="btn btn-warning"
+    [routerLink]="['/']"
+    
+  >
+    Go Back
+  </button>
   <div class="card-body" style="text-align: -webkit-center;">
-    <img (click)="changePic()"
+    <img
+      (click)="changePic()"
       class="rounded-circle mx-auto d-block"
       style="background-color:#EEFFFF; width: 150px;"
       src="{{ picS[picIndex] }}"
       alt="Card image cap"
     />
-    <h1 style="margin-bottom: 20px;" class="card-title">{{ name | titlecase }}</h1>
+    <h1 style="margin-bottom: 20px;" class="card-title">
+      {{ name | titlecase }}
+    </h1>
     <h3>Types</h3>
     <div *ngFor="let r of types">
-      <h5 style="text-transform: capitalize">{{ r.type.name}}</h5>
+      <h5 style="text-transform: capitalize">{{ r.type.name }}</h5>
     </div>
     <h3 style="margin-bottom: 20px;">Base Stats</h3>
     <div class="col-sm-12   col-md-6 col-md-offset-3">
@@ -22,11 +33,13 @@
           class="d-flex w-100  justify-content-between"
           style="align-items: center;"
         >
-        <h5 style="text-transform: capitalize">{{ p.stat.name  | replace : '-' : ' '}}</h5>
+          <h5 style="text-transform: capitalize">
+            {{ p.stat.name | replace: "-":" " }}
+          </h5>
           <div class="col"></div>
           <progress
             min="0"
-            max="700"
+            max="255"
             value="{{ p.base_stat }}"
             style="width:33%; text-align: right;"
           >
@@ -42,7 +55,7 @@
 
       <div class="d-flex w-100  justify-content-between">
         <h5>Species</h5>
-        <h5 style="text-transform: capitalize">{{ species.name}}</h5>
+        <h5 style="text-transform: capitalize">{{ species.name }}</h5>
       </div>
     </div>
   </div>
